@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <package>
-  <name>kinect1_arucoROS</name>
+  <name>kinect1_aruco-ros</name>
   <version>0.0.0</version>
-  <description>The kinect1_arucoROS package</description>
+  <description>The kinect1_aruco-ros package</description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag --> 
   <!-- Example:  -->
