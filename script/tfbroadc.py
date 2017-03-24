@@ -17,8 +17,8 @@ def callback(msg):
                         marker.header.frame_id)
 
 if __name__ == '__main__':
-    rospy.init_node('turtle_tf_broadcaster')
-    rospy.Subscriber('/aruco_marker_publisher_right/markers', MarkerArray ,callback)
+    rospy.init_node('aruco_tf_broadc')
+    rospy.Subscriber('/aruco_marker_publisher_k1/markers', MarkerArray ,callback)
     def clean_shutdown():
         print("\nExiting...")
     rospy.on_shutdown(clean_shutdown)
