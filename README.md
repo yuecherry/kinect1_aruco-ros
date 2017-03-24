@@ -9,7 +9,7 @@ An example on how to estimate the pose of an aruco marker with kinect1 and ROS
  	* ```xml<param name="camera_frame" value="/kinect1_rgb_optical_frame"/>```
 	* ```xml<arg name="markerSize" default="0.181"/>```
 
-* Copy the launch file in a ros package
+* Copy the package in a ros workspace
 * Launch arucopublisher.launch with roslaunch
 * Use rqt_image_view to check if aruco marker is tracked (/result/image topic)
 * Run the python script arucopose.py that subscribes to /markers topic published by marker_publisher node and average 10 poses in SE3.  
