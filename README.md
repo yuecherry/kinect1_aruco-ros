@@ -4,9 +4,10 @@ An example on how to estimate the pose of an aruco marker with kinect1 and ROS
 # Instructions
 * Launch a ROS kinect1 rgb image grabber
 * Change the images topic and parameters names in launch/arucopublisher.launch according to your image grabber topics names:
- * ```xml<remap from="/camera_info" to="/kinect1/rgb/camera_info" />```
- * ```xml<remap from="/image" to="/kinect1/rgb/image" />```
- * ```xml<param name="camera_frame" value="/kinect1_rgb_optical_frame"/>```
+	* ```xml<remap from="/camera_info" to="/kinect1/rgb/camera_info" />```
+ 	* ```xml<remap from="/image" to="/kinect1/rgb/image" />```
+ 	* ```xml<param name="camera_frame" value="/kinect1_rgb_optical_frame"/>```
+	* ```xml<arg name="markerSize" default="0.181"/>```
 
 * Copy the launch file in a ros package
 * Launch arucopublisher.launch with roslaunch
@@ -15,9 +16,7 @@ An example on how to estimate the pose of an aruco marker with kinect1 and ROS
 
 # Notes
 * The script arucopose.py contains hard-coded markerid (105)
-* The launch file arucopublisher.launch contains default marker size value: ```xml<arg name="markerSize" default="0.181"/>```
 * By default the script writes two config files in ~/.ros directory:
- * calib_k1.json: contains the transformation matrix from the marker to the camera in json format
- * calib_k1q.json: contains the translation + quaternion(qx,qy,qz,qw) from the marker to the camera in json format
-
+ 	* calib_k1.json: contains the transformation matrix from the marker to the camera in json format
+ 	* calib_k1q.json: contains the translation + quaternion(qx,qy,qz,qw) from the marker to the camera in json format
 * The data in calib_k1q.json can be use with static_transform_publisher node of tf package to publish the transformation
